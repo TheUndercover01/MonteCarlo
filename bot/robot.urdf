@@ -96,7 +96,7 @@
 <parent link="clipper_comp" />
 <child link="gripper" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-0.52359877559829881566" upper="0.26179938779914940783"/>
+<limit effort="1" velocity="20" lower="-0.52359877559829881566" upper="0.36179938779914940783"/>
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -128,7 +128,7 @@
 <parent link="clipper_comp" />
 <child link="gripper_2" />
 <axis xyz="0 0 1"/>
-    <limit effort="1" velocity="20" lower="-0.52359877559829881566" upper="0.26179938779914940783"/>
+    <limit effort="1" velocity="20" lower="-0.52359877559829881566" upper="0.36179938779914940783"/>
 <joint_properties friction="0.0"/>
 </joint>
 
@@ -137,7 +137,7 @@
 <parent link="stand" />
 <child link="clipper_comp" />
 <axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" lower="-0.20999999999999999223" upper="0.23000000000000000999"/>
+<limit effort="1" velocity="20" lower="-0.210000000000000000" upper="0.21000000000000000999"/>
 <joint_properties friction="0.0"/>
 </joint>
 
