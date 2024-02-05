@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from collections import Counter
 import random
 import math
+import time
 
 class Pickup_Bot_Env():
     def __init__(self,robot,GUI=False):
