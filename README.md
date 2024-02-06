@@ -13,37 +13,37 @@ Check out the bot on Onshape [here](https://cad.onshape.com/documents/04a8f06c4e
 
 ## How to run
 
-``` python
-    import pybullet as p
-    import time
-    import numpy as np
-    import pybullet_data 
-    import matplotlib.pyplot as plt
-    from Env import Pickup_Bot_Env
-    
-    import math
-    #results 
-    policy = np.load('./<save_path>/<iteration>/<policy.npy>' , allow_pickle=True)
-    path_to_bot = './bot/robot.urdf'
-    
-        # Create environment instance
-    position = (0, 0.32, -0.84, -0.84) # Starting state
-    env = Pickup_Bot_Env(path_to_bot,position, True , False)
-    current_pos = env.get_current_state()
-    policy = policy.item() # as we have saved a .npy the new file needs to be converted back to a dictionary
-    while env.rounded_position != env.terminal_state:
-        temp = []
-        action = env.take_action(policy)
-        temp.append(env.rounded_position)
-        
-        env.step(action)
-        reward = env.get_reward() #here the getstate updates the current position so we dont need to call get_current_state again
-        temp.extend([action , reward]) #update the current state , action
-        print("State | Action | Reward" , temp)
-    
-    
-    env.reset_env()
-    print("Reached")
+    ``` python
+            import pybullet as p
+            import time
+            import numpy as np
+            import pybullet_data 
+            import matplotlib.pyplot as plt
+            from Env import Pickup_Bot_Env
+            
+            import math
+            #results 
+            policy = np.load('./<save_path>/<iteration>/<policy.npy>' , allow_pickle=True)
+            path_to_bot = './bot/robot.urdf'
+            
+                # Create environment instance
+            position = (0, 0.32, -0.84, -0.84) # Starting state
+            env = Pickup_Bot_Env(path_to_bot,position, True , False)
+            current_pos = env.get_current_state()
+            policy = policy.item() # as we have saved a .npy the new file needs to be converted back to a dictionary
+            while env.rounded_position != env.terminal_state:
+                temp = []
+                action = env.take_action(policy)
+                temp.append(env.rounded_position)
+                
+                env.step(action)
+                reward = env.get_reward() #here the getstate updates the current position so we dont need to call get_current_state again
+                temp.extend([action , reward]) #update the current state , action
+                print("State | Action | Reward" , temp)
+            
+            
+            env.reset_env()
+            print("Reached")
 
 This code can be used with any of the provided notebooks. You can adjust the starting state to any possible states mentioned in the notebook. The script simulates the bot in PyBullet and displays the bot's actions in real-time. Note that in the env.ipynb, the env.step method includes a time.sleep(1/24) line within the for loop to slow down the simulation for better visualization. You can choose to remove that line if you want to train the bot without the visualization delay.
 
