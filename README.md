@@ -13,7 +13,7 @@ Check out the bot on Onshape [here](https://cad.onshape.com/documents/04a8f06c4e
 
 ## How to run
 
-    ``` python
+``` python
     import pybullet as p
     import time
     import numpy as np
