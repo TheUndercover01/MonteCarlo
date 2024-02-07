@@ -2,6 +2,10 @@
 
 This repository is a submodule of another repository [TabularRL-Main](https://github.com/TheUndercover01/TabularRL-Main/tree/main), where the dynamics of the bot and environment, as well as the PyBullet simulation used, are explained in detail. 
 
+## Results
+
+https://github.com/TheUndercover01/TabularRL-Main/assets/141422918/05a18cc4-e1c0-46b3-8900-96df2a6a3e33
+
 ## Overview
 This repository contains implementations of two major algorithms based on the Monte Carlo method, inspired by the book "Reinforcement Learning: An Introduction" by Sutton and Barto. The algorithms implemented are On-Policy Learning Without Exploring Starts and Off-Policy Learning with Importance Sampling. You can find detailed explanations of these algorithms in the accompanying Jupyter notebook file.
 
